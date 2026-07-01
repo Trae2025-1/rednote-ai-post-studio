@@ -12,7 +12,7 @@
 → 正文文案
 → 关键词标签
 → 封面文案
-→ 可编辑 SVG 封面
+→ 参考库驱动封面图
 → PNG 预览
 → 合规检查
 → 发布建议
@@ -89,11 +89,23 @@ DayX｜【工具】办公实战
 
 如果你要求「联网找近期关键词」或「查热门搜索词」，Skill 会先调研再生成。
 
-### 5. 封面不是重画，而是严格套参考库
+### 5. 封面以参考库为强依据，不再机械套模板
 
-封面生成遵循内置参考图和模板，不自由发挥。它会在参考库中选择最接近的版式，然后只做必要替换。
+封面生成会先从内置参考图里选择最接近的视觉类型，再按照这张参考图的版式、留白、标题层级、logo 位置、底部结构和色调规则来做。
 
-这让连续内容更容易保持账号统一感。
+新的封面流程不是简单把 SVG 模板换字，而是：
+
+```text
+选参考图
+→ 提取作图清单
+→ 根据标题生成画面质感和构图
+→ 替换为当前工具色调
+→ 使用真实 logo
+→ 用可控字体叠加最终标题
+→ 按清单验收
+```
+
+这样既能保持账号统一感，也能让封面更像成品小红书头图，而不是工程模板截图。
 
 ## 快速使用
 
@@ -113,7 +125,7 @@ Use $rednote-ai-post-studio to create a Xiaohongshu post and cover from this top
 
 ```text
 rednote-ai-post-studio-output/<topic-slug>/publish-pack.md
-rednote-ai-post-studio-output/<topic-slug>/cover.svg
+rednote-ai-post-studio-output/<topic-slug>/cover.svg 或其他可编辑源/叠加文件
 rednote-ai-post-studio-output/<topic-slug>/cover.png
 ```
 
@@ -148,7 +160,7 @@ rednote-ai-post-studio-output/<topic-slug>/cover.png
 ```text
 主题：NotebookLM 资料整理教程
 Logo：/path/to/notebooklm-logo.svg
-封面要求：使用参考库里最接近的单工具教程封面，只替换文字，不换字体。
+封面要求：使用参考库里最接近的单工具教程封面，按参考图做色调和 logo 替换，最终文字用可控字体叠加。
 ```
 
 ## 输出内容
@@ -174,11 +186,13 @@ Logo：/path/to/notebooklm-logo.svg
 
 ### 允许
 
-- 修改海报标题、副标题、角标、底部说明等文字。
-- 保持原海报字体，不换字体。
-- 在原有基础上轻微修改背景色或强调色，用来区分不同主题。
-- 根据用户上传的 logo 放置 logo。
+- 使用参考库中的具体案例作为强视觉依据。
+- 根据用户选择的标题或推荐标题确定封面主标题。
+- 调用 image 能力生成符合参考图气质的画面、背景、质感、阴影和构图。
+- 在原有参考图基础上替换背景色或强调色，用来匹配当前工具色调。
+- 根据用户上传的 logo 放置真实 logo。
 - 如果用户要求联网找公开 logo，并且环境允许联网，可以查找真实 logo 资产后放入对应位置。
+- 最终标题使用可控字体叠加，保证中文可读。
 
 ### 禁止
 
@@ -188,10 +202,21 @@ Logo：/path/to/notebooklm-logo.svg
 - 重绘、改色、裁切或重新设计 logo。
 - 没有真实 logo 时凭空发明 logo。
 - 脱离参考库重新设计一张新海报。
+- 直接采用 image 模型生成的变形中文作为最终封面标题。
+- 让 image 模型凭空复刻品牌 logo。
 
 ## 生成质量检查
 
-封面生成后会用脚本校验：
+封面生成后会按清单校验：
+
+- 是否选定了具体参考图或参考类型。
+- 是否沿用了参考图的版式、标题层级、logo 位置和装饰风格。
+- 是否使用用户选择的标题或推荐标题。
+- logo 是否来自用户上传或真实查找，而不是模型重画。
+- 中文标题是否清晰可读，没有变形。
+- 色调替换是否符合当前工具品牌色。
+
+如果输出 SVG 或 SVG 叠加层，还会用脚本校验：
 
 ```bash
 node scripts/validate_cover.js rednote-ai-post-studio-output/<topic>/cover.svg rednote-ai-post-studio-output/<topic>/cover.png

@@ -45,6 +45,8 @@ Always output the publishing package in this order.
 - 设计要求：
 - 输出格式：
 - 生成方式：
+- 后期处理：
+- 验收清单：
 
 ## 8. 合规检查
 - 夸张承诺：
@@ -58,8 +60,9 @@ Always output the publishing package in this order.
 - 可延展下一篇：
 
 ## 10. 封面文件
-- SVG：
-- PNG：
+- 最终 PNG：
+- 可编辑源/叠加文件：
+- 参考图/参考类型：
 - 校验：
 ```
 

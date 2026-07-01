@@ -15,7 +15,8 @@ Turn the publishing package into a strict cover-edit brief.
 - Logo source:
 - Background/accent color adjustment:
 - Locked elements:
-- Output: SVG + PNG
+- Production mode: image-first + text/logo overlay, or SVG fallback
+- Output: final PNG + editable source/overlay when feasible
 
 ## Locked Elements
 
@@ -26,6 +27,8 @@ Always state:
 - Preserve decoration style.
 - Preserve hierarchy.
 - Only replace text, optional background/accent color, and logo placement.
+- Use image generation only for reference-matched poster polish.
+- Add final readable title text and exact logo after image generation.
 
 ## No Logo Available
 

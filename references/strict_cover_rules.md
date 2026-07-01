@@ -4,12 +4,19 @@
 
 The cover image must be derived from the bundled reference library. Do not treat the cover step as open-ended graphic design.
 
+The preferred production method is now image-first plus controlled post-processing:
+
+1. Use the reference library as the strong visual basis.
+2. Use image generation to create a polished poster surface that matches the selected reference family.
+3. Add final readable title text and real logos afterward with controlled typography and exact assets.
+
 Use:
 
 - `assets/reference-cases/` for visual reference.
 - `assets/templates/` as editable starting points.
 - `references/template-selection.md` to choose the closest pattern.
 - `references/visual-system.md` for constraints.
+- `references/image-cover-workflow.md` for the image-first cover workflow.
 
 ## Allowed Changes
 
@@ -39,6 +46,12 @@ Only these changes are allowed:
    - Keep logo aspect ratio.
    - Place the logo in the corresponding logo area from the selected reference/template.
 
+5. Use image generation:
+   - Generate only inside the selected reference family's layout and mood.
+   - Use it for background, lighting, texture, depth, and poster finish.
+   - Use the current tool/logo palette for color replacement.
+   - Add final title text and real logo in post-processing.
+
 ## Forbidden Changes
 
 Do not:
@@ -52,6 +65,9 @@ Do not:
 - Redraw, recolor, stylize, or reconstruct uploaded logos.
 - Invent a tool logo.
 - Use generic stock imagery unless the selected reference/template already uses a comparable image slot.
+- Let image-model text become the final cover title.
+- Ignore the reference library and generate a new poster direction from scratch.
+- Change the selected reference's layout family after image generation unless the result clearly failed validation.
 
 ## Template Selection
 
@@ -68,9 +84,10 @@ Select the closest existing reference/template:
 Before final delivery:
 
 - The selected reference/template is named.
-- Only text, optional background color, and logo placement changed.
+- Only text, optional color tone, logo placement, and reference-matching image polish changed.
 - Font family and typography style are preserved.
 - Layout and decoration families are preserved.
 - Logo is real or explicitly marked as replaceable.
-- SVG and PNG exist.
-- `scripts/validate_cover.js` passes or remaining warnings are clearly reported.
+- Final PNG exists.
+- Editable SVG/source/overlay exists when feasible.
+- If using SVG export, `scripts/validate_cover.js` passes or remaining warnings are clearly reported.
