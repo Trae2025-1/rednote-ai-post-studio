@@ -1,0 +1,8 @@
+interface:
+  display_name: "Rednote AI Post Studio"
+  short_description: "一站式生成小红书文案与封面"
+  brand_color: "#3167F4"
+  default_prompt: "Use $rednote-ai-post-studio to create a Xiaohongshu post and cover from this topic keyword."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440" role="img" aria-label="{{ALT_TEXT}}">
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#16213A" flood-opacity="0.13"/>
+    </filter>
+    <linearGradient id="accentGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="{{ACCENT_COLOR}}"/>
+      <stop offset="100%" stop-color="{{ACCENT_COLOR_2}}"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1440" fill="{{PAGE_BG}}"/>
+  <rect x="50" y="50" width="980" height="1340" rx="50" fill="{{CARD_BG}}"/>
+
+  <g id="logo-area" filter="url(#softShadow)">
+    <path d="M292 246 C330 150, 450 132, 528 180 C596 126, 714 160, 744 252 C836 280, 878 400, 810 470 C830 564, 742 644, 648 620 C584 700, 456 692, 408 606 C312 612, 242 518, 282 430 C210 366, 226 270, 292 246 Z" fill="{{LOGO_BLOB_COLOR}}" opacity="0.38"/>
+    <image x="340" y="194" width="400" height="400" href="{{LOGO_1_HREF}}" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+
+  <g id="headline">
+    <text x="126" y="720" font-family="{{FONT_CN}}" font-size="76" font-weight="900" fill="#080B12">{{TITLE_LINE_1}}</text>
+    <text x="126" y="812" font-family="{{FONT_CN}}" font-size="86" font-weight="900" fill="url(#accentGradient)">{{TITLE_LINE_2}}</text>
+    <text x="126" y="904" font-family="{{FONT_CN}}" font-size="74" font-weight="900" fill="#080B12">{{TITLE_LINE_3}}</text>
+    <text x="126" y="996" font-family="{{FONT_CN}}" font-size="74" font-weight="900" fill="{{ACCENT_COLOR}}">{{TITLE_LINE_4}}</text>
+    <path d="M656 1018 C706 1034, 802 1034, 852 1018" fill="none" stroke="{{ACCENT_COLOR}}" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <g id="bottom-benefits" font-family="{{FONT_CN}}" font-size="34" font-weight="700" fill="#14171F">
+    <g transform="translate(156 1240)">
+      <circle cx="0" cy="0" r="18" fill="none" stroke="{{ACCENT_COLOR}}" stroke-width="5"/>
+      <path d="M-8 -1 L-2 7 L10 -9" fill="none" stroke="{{ACCENT_COLOR}}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="38" y="12">{{BENEFIT_1}}</text>
+    </g>
+    <path d="M390 1218 V1264" stroke="#AEB5C1" stroke-width="2"/>
+    <g transform="translate(468 1240)">
+      <circle cx="0" cy="0" r="18" fill="none" stroke="{{ACCENT_COLOR}}" stroke-width="5"/>
+      <path d="M-8 -1 L-2 7 L10 -9" fill="none" stroke="{{ACCENT_COLOR}}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="38" y="12">{{BENEFIT_2}}</text>
+    </g>
+    <path d="M702 1218 V1264" stroke="#AEB5C1" stroke-width="2"/>
+    <g transform="translate(780 1240)">
+      <circle cx="0" cy="0" r="18" fill="none" stroke="{{ACCENT_COLOR}}" stroke-width="5"/>
+      <path d="M-8 -1 L-2 7 L10 -9" fill="none" stroke="{{ACCENT_COLOR}}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="38" y="12">{{BENEFIT_3}}</text>
+    </g>
+  </g>
+</svg>
