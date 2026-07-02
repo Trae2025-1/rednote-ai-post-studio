@@ -2,72 +2,65 @@
 
 ## Principle
 
-The cover image must be derived from the bundled reference library. Do not treat the cover step as open-ended graphic design.
+The cover image must be derived from the bundled reference library. The selected reference image is the aesthetic source of truth.
 
-The preferred production method is now image-first plus controlled post-processing:
-
-1. Use the reference library as the strong visual basis.
-2. Use image generation to create a polished poster surface that matches the selected reference family.
-3. Add final readable title text and real logos afterward with controlled typography and exact assets.
-
-Use:
-
-- `assets/reference-cases/` for visual reference.
-- `assets/templates/` as editable starting points.
-- `references/template-selection.md` to choose the closest pattern.
-- `references/visual-system.md` for constraints.
-- `references/image-cover-workflow.md` for the image-first cover workflow.
+Image generation is the primary cover maker. Codex is the selector, brief writer, and quality checker. Codex must not hand-design the cover with frontend, Pillow, SVG coordinates, or manual layout unless the user explicitly approves a manual fallback.
 
 ## Allowed Changes
 
 Only these changes are allowed:
 
-1. Replace title/copy text:
+1. Replace logo:
+   - Use the user's uploaded logo when supplied.
+   - If the user asks for a public logo and lookup is available, use a real official or reliable logo asset.
+   - Put the logo in the same reference logo slot and treatment.
+   - Do not invent, redraw, recolor, or stylize the logo.
+
+2. Replace slogan/title/copy:
    - Main title.
    - Subtitle.
    - Corner label.
    - Bottom note.
-   - Short benefit text.
+   - Short benefit/menu text.
+   - Keep connected Chinese phrases intact.
 
-2. Preserve typography:
-   - Keep the original poster font family.
-   - Keep the original font weight style.
-   - Keep the original relative size hierarchy.
-   - Do not introduce new typefaces or decorative font effects.
+3. Adjust color tone:
+   - Allowed when it makes the new cover more beautiful, better matched to the tool, or visually distinct from related covers.
+   - The tone change must be image-generated inside the selected reference style.
+   - The logo color is a cue for accents, not a command to make the whole poster the same color.
+   - When the best palette is not obvious, proactively compare or specify 2-3 tone directions and choose the strongest one.
+   - The selected reference locks layout and element style, not the exact palette. The new cover must use a differentiated color tone.
+   - Keep the reference composition, hierarchy, typography feel, spacing, decoration family, and CTA treatment.
+   - Keep the reference element density and layered poster richness.
 
-3. Adjust background or accent color:
-   - Use this only to distinguish topics in a series.
-   - Keep the original visual mood.
-   - Do not turn the poster into a new style.
-
-4. Place logos:
-   - Prefer user-uploaded logo files.
-   - If the user asks for a public tool logo and web lookup is available, find a real logo asset from an official or reliable source.
-   - Keep logo aspect ratio.
-   - Place the logo in the corresponding logo area from the selected reference/template.
-
-5. Use image generation:
-   - Generate only inside the selected reference family's layout and mood.
-   - Use it for background, lighting, texture, depth, and poster finish.
-   - Use the current tool/logo palette for color replacement.
-   - Add final title text and real logo in post-processing.
+4. Minimal post-processing:
+   - Allowed only to correct exact logo or readable text.
+   - Must use the same slots, sizes, alignment, and treatment from the reference.
+   - Must not redesign the poster.
 
 ## Forbidden Changes
 
 Do not:
 
-- Change the poster font.
+- Hand-code the cover layout with frontend, Pillow, SVG, or manual coordinates as the main method.
+- Generate a blank background and manually arrange logo/title/CTA afterward.
 - Redesign the layout.
-- Move core layout sections beyond minor text fitting.
-- Replace the reference style with a new visual direction.
+- Change the poster font style or typography hierarchy.
 - Add new decoration types.
-- Remove the selected template's core visual identity.
-- Redraw, recolor, stylize, or reconstruct uploaded logos.
-- Invent a tool logo.
-- Use generic stock imagery unless the selected reference/template already uses a comparable image slot.
-- Let image-model text become the final cover title.
-- Ignore the reference library and generate a new poster direction from scratch.
-- Change the selected reference's layout family after image generation unless the result clearly failed validation.
+- Add visual elements that are not visible in the selected reference.
+- Remove most visual elements from an element-rich reference and make the cover overly empty.
+- Add random blue lines, curved strokes, arrows, underlines, separators, stickers, badges, icons, or blobs.
+- Use crude manual color blocks as a "tone change."
+- Use SVG/manual editing to change colors or add decorations after image generation.
+- Make the whole poster match the logo so literally that the result becomes flat or monotonous.
+- Wait for the user to remind you to try a different color tone when the current tone is weak.
+- Copy the selected reference image's color scheme exactly.
+- Make the cover look like a frontend card instead of a finished poster.
+- Use default-looking typed small text for CTA, benefit labels, or bottom copy.
+- Put a product/tool name inside the middle of a connected Chinese phrase.
+- Use a rough painted, mosaic, blurred, or generic backplate for a logo unless the selected reference uses that exact treatment.
+- Repeat the same copy across subtitle and menu/benefit labels.
+- Deliver misaligned check/menu icon rows.
 
 ## Template Selection
 
@@ -83,11 +76,20 @@ Select the closest existing reference/template:
 
 Before final delivery:
 
-- The selected reference/template is named.
-- Only text, optional color tone, logo placement, and reference-matching image polish changed.
-- Font family and typography style are preserved.
-- Layout and decoration families are preserved.
-- Logo is real or explicitly marked as replaceable.
+- The selected reference image is named.
+- Different reference styles were considered when possible.
+- The final cover is an image-generated finished poster, not a hand-designed layout.
+- Only logo, slogan/title/copy, and optional color tone changed.
+- The color-tone adjustment is aesthetically better and still belongs to the selected reference style.
+- The palette uses logo color intelligently as an accent cue, while preserving overall poster aesthetics and contrast.
+- The palette is visibly differentiated from the selected reference image, while the composition still follows it.
+- Composition, typography feel, hierarchy, spacing, CTA treatment, logo slot, and decoration family follow the selected reference.
+- Element density follows the selected reference; rich references remain rich.
+- Logo directly replaces the reference logo slot; no invented backplate or fake placeholder remains.
+- Title grouping and reading order are natural.
+- CTA, bottom labels, and menu text do not look like plain typed text.
+- Subtitle, menu/benefit row, and CTA have distinct jobs.
+- Check/menu icon rows are visually centered and aligned.
+- No invented decoration remains.
+- Manual post-processing, if any, only corrected exact logo/text without redesigning.
 - Final PNG exists.
-- Editable SVG/source/overlay exists when feasible.
-- If using SVG export, `scripts/validate_cover.js` passes or remaining warnings are clearly reported.

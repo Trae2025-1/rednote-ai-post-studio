@@ -11,6 +11,13 @@ Choose templates by the user's uploaded logo count and content type. Do this bef
 5. Else if the slogan naturally supports three small benefits: use **Three-Benefit Clean Template**.
 6. Else use **Single-Logo Tutorial Template**.
 
+Before finalizing the template, check title fit:
+
+- The selected reference must keep connected Chinese title phrases intact.
+- Do not choose a reference if it forces the tool name into the middle of a phrase.
+- Bottom benefits or CTA text must fit the reference's designed chip, pill, band, or label treatment.
+- If the title is a complete sentence or phrase, prefer a layout that can show it as one phrase plus a separate product/logo area.
+
 ## PDF Resource Template
 
 Use for files, PDF manuals, reports, checklists, prompt packs, and "完整手册".

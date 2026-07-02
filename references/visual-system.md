@@ -149,18 +149,28 @@ Font policy:
 
 ## Color Logic
 
-Derive palette from the uploaded logo:
+Use the uploaded logo as a palette cue, not as a full-poster palette command.
 
-- Blue logo: white/pale blue/lavender background, blue accent, black headline.
-- Green logo: white/pale green background, green accent, black headline.
-- Purple logo: white/pale lavender background, purple accent, black headline.
-- Multi-color logo: keep headline black, use logo colors only in product word or small accents.
+The overall palette should be chosen for poster quality, readability, topic differentiation, and the selected reference style. Do not make the whole cover identical to the logo color just because the logo is strongly colored or black-and-white. Also do not copy the selected reference image's exact palette; the reference locks layout and element style, not color.
+
+Before final generation, consider 2-3 tone directions when useful:
+
+- Logo-accented clean: neutral/off-white base, black headline, logo color only in product word, CTA, checks, or small accents.
+- Warm editorial: cream/warm white base, coral/orange accent, black headline, useful when the logo is too dark or too cold.
+- Cool premium: ice blue/silver-gray base, graphite headline, restrained blue accent, useful for technical tools.
+- Fresh productivity: pale green/blue base, clean black headline, limited saturated accent.
+- High-contrast monochrome: white/gray/black base with one small accent, useful for Notion-like black logos.
+
+Choose the best-looking direction. Do not wait for the user to ask for color variation.
+
+The final palette should be visibly differentiated from the selected reference image while still feeling like the same poster family.
 
 Recommended ratios:
 
 - 70-80% light background.
 - 10-20% black headline.
-- 5-15% logo-derived accent.
+- 5-15% logo-derived accent when it improves the poster.
+- 0-10% logo-derived accent is acceptable for black/white logos; use a compatible accent color for energy.
 
 Avoid one-note saturation. Accent color should guide attention, not fill the whole cover.
 

@@ -41,12 +41,18 @@ Always output the publishing package in this order.
 ## 7. 封面生成指令
 - 比例：
 - 风格：
-- 参考方向：
-- 设计要求：
+- 参考母版：
+- 替换内容：
+- 色调调整：
+- image 生成说明：
+- 设计锁定项：
 - 输出格式：
 - 生成方式：
-- 后期处理：
+- 手工后期限制：
 - 验收清单：
+- Logo 替换：
+- 对齐检查：
+- 重复文案检查：
 
 ## 8. 合规检查
 - 夸张承诺：
@@ -60,9 +66,11 @@ Always output the publishing package in this order.
 - 可延展下一篇：
 
 ## 10. 封面文件
+- image 生成成品：
 - 最终 PNG：
 - 可编辑源/叠加文件：
 - 参考图/参考类型：
+- 最小后期说明：
 - 校验：
 ```
 
