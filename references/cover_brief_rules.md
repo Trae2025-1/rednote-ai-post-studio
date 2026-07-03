@@ -13,6 +13,8 @@ Turn the publishing package into a strict cover-edit brief.
 - Corner label:
 - Bottom note:
 - Logo source:
+- Logo decision:
+- Pure-text/no-logo treatment:
 - Background/accent color adjustment:
 - Locked elements:
 - Candidate reference styles:
@@ -71,6 +73,9 @@ Always state:
 
 If no logo is provided and no lookup is requested or available:
 
-- Use the template's editable placeholder.
-- Mark it as replaceable.
+- For public, well-known product/tool names, use web lookup for an official or reliable logo when available; mention that user upload is more precise if they have a preferred version.
+- For private, personal, internal, ambiguous, or uncertain brands, recommend that the user upload a logo instead of guessing.
+- If the user wants a pure-text cover, choose a no-logo-friendly reference or convert the logo slot into a designed text focal point.
+- Pure-text logo-slot conversions may use a large keyword, chapter number, topic label, or core value card.
+- Do not leave an empty logo hole.
 - Do not invent a logo.

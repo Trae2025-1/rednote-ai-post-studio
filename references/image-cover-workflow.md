@@ -25,6 +25,7 @@ The selected reference image is the mother template, not a loose inspiration boa
 - 2-3 candidate reference images from different style families when possible.
 - One final specific reference image from `assets/reference-cases/` or the user's reference library.
 - Logo source: user-uploaded file, looked-up official asset, or explicit placeholder.
+- Logo decision: uploaded logo, reliable public-logo lookup, upload recommended, or pure-text/no-logo path.
 - Replacement slogan/title/copy.
 - 2-3 candidate color-tone directions, such as logo-accented clean, warm editorial, cool premium, soft gradient, high-contrast monochrome, or fresh blue-green.
 
@@ -36,8 +37,15 @@ The selected reference image is the mother template, not a loose inspiration boa
    - Reject a reference if it forces an awkward title split or makes bottom text look like default typing.
    - Name the exact final reference image in the cover brief.
 
-2. Create a replacement map:
+2. Decide the no-logo path when no logo is uploaded:
+   - Public tool/product names may use web lookup for an official or reliable logo when available.
+   - Private, internal, personal, ambiguous, or uncertain brands should not be guessed from search; recommend that the user upload the logo.
+   - If the user asks for a pure-text cover, do not search for a logo. Choose a reference whose visual center can be text.
+   - Never ask image generation to invent a logo.
+
+3. Create a replacement map:
    - Logo slot to replace.
+   - If pure-text/no-logo: logo slot conversion, such as large keyword, `01` chapter number, topic label, or core value card.
    - Main title/slogan slot to replace.
    - Subtitle, corner label, CTA, menu row, or benefit-label slots to replace.
    - Text that must stay together semantically.
@@ -47,7 +55,7 @@ The selected reference image is the mother template, not a loose inspiration boa
    - Elements that must remain unchanged: composition, hierarchy, spacing, typography feel, decorations, logo treatment, CTA treatment.
    - Element-density requirement: what decorative marks, layered regions, waves, labels, emphasis strokes, or background texture must remain so the poster does not become too empty.
 
-3. Call built-in image generation for the finished poster:
+4. Call built-in image generation for the finished poster:
    - Provide the selected reference image as the hard visual source.
    - Ask image generation to recreate the finished poster design with the replacement map applied.
    - Replace only logo and copy.
@@ -59,18 +67,18 @@ The selected reference image is the mother template, not a loose inspiration boa
    - Do not ask for a blank background, empty card, or later manual layout.
    - Do not ask image generation to invent new decorative lines, arrows, underlines, icons, stickers, badges, separators, or blobs.
 
-4. Review the generated cover:
+5. Review the generated cover:
    - If the image has ugly manual-looking text, garbled Chinese, fake logo, rough logo backplate, bad alignment, or invented decoration, regenerate with a stricter prompt.
    - If the selected reference cannot support the title cleanly, choose another reference and regenerate.
    - Do not solve a failed generation by manually designing a new poster.
 
-5. Minimal post-processing is allowed only for exact correction:
+6. Minimal post-processing is allowed only for exact correction:
    - Replace or sharpen the real logo in the same logo slot.
    - Correct readable title/copy in the same text slot.
    - Preserve the generated/reference layout, size, baseline, alignment, spacing, hierarchy, and treatment.
    - Do not add new layout, decorative lines, background blocks, manual menu rows, or new typography.
 
-6. Export:
+7. Export:
    - Save the image-generated composite.
    - Save the final PNG.
    - Include a minimal overlay/source file only if it records exact logo/text correction, not a manually designed cover.
@@ -93,6 +101,7 @@ The prompt must include:
 - "Do not hand-design, frontend-design, or arrange text/logo manually."
 - The final title grouping, including where the product/tool name goes without breaking Chinese phrase order.
 - The exact logo source and instruction to use the real logo, not a painted, mosaic, blurred, or fake logo area.
+- If pure-text/no-logo, state exactly how the logo area becomes a text focal point, and forbid empty logo holes or fake icons.
 
 The prompt must not include:
 
@@ -102,6 +111,8 @@ The prompt must not include:
 - "Add tasteful decorations", "make it more dynamic", or other open-ended design freedom.
 - New layout concepts not visible in the selected reference.
 - Requests to invent, redraw, recolor, or stylize a brand logo.
+- Empty logo placeholders in pure-text covers.
+- Fake logos for unknown brands.
 
 ## Color Tone Rule
 
@@ -166,6 +177,7 @@ Before final delivery, verify:
 - No frontend/Pillow/SVG/manual-coordinate cover design was used as the main method.
 - Manual post-processing, if any, only corrected exact logo/text in the same slots.
 - The real logo is used or the placeholder is clearly marked.
+- If pure-text/no-logo, the logo area was intentionally converted into a designed text focal point.
 - Chinese text is readable and keeps phrase order.
 - No invented decorations remain.
 - Final PNG exists.

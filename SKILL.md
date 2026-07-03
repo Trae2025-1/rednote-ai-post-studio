@@ -48,6 +48,10 @@ Unless the user explicitly asks for copy only, produce:
    - Prefer comparing 2-3 different reference styles before choosing.
    - Name the exact reference image(s) used.
    - Treat the selected reference image as the visual contract, not a loose mood board.
+   - If no logo is uploaded, decide the logo path before selecting the final reference:
+     - Public, well-known AI/product brand: use web lookup for an official or reliable logo when network is available; tell the user upload is still more precise if they have a preferred version.
+     - Private, personal, internal, ambiguous, or likely trademark-sensitive brand: recommend uploading a logo instead of guessing from the web.
+     - User asks for pure-text cover or no logo: choose a no-logo-friendly reference, or convert the logo slot into a text visual center.
 6. Choose the final cover title:
    - Use the title selected by the user when provided.
    - Otherwise use the recommended title.
@@ -89,6 +93,8 @@ Allowed:
 - Keep reference composition, but differentiate the palette from the selected reference image; never copy the reference color scheme one-to-one.
 - Place a user-provided logo exactly as supplied.
 - If the user asks to use a public logo and web lookup is available, locate a real logo asset and place it without redrawing.
+- If no logo is uploaded, do not invent one. Either find a reliable public logo, ask/recommend upload, or use a pure-text cover path.
+- For pure-text covers, replace the logo slot with a designed text focal point such as a large keyword, chapter number, topic label, or value card.
 - Use image generation to create the finished reference-based poster, with only logo/copy replacement and optional color-tone adjustment.
 - Use only decoration elements already present in the selected reference image.
 - Preserve the selected reference's element density, decorative rhythm, and layered poster feel.
@@ -103,6 +109,8 @@ Not allowed:
 - Change the poster structure beyond text replacement, logo replacement, and optional color-tone adjustment.
 - Redraw, recolor, crop beyond recognition, or stylize logos.
 - Invent a logo when none is available.
+- Leave an empty logo hole in a pure-text cover.
+- Force ordinary text into a logo slot without adapting the reference composition.
 - Hand-code the poster with frontend/Pillow/SVG/manual coordinates as the main design method.
 - Generate a blank background and then manually arrange logo/title/CTA as a separate design.
 - Let image generation improvise a new layout unrelated to the selected reference.

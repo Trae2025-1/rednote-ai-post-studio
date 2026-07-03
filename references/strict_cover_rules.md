@@ -15,6 +15,8 @@ Only these changes are allowed:
    - If the user asks for a public logo and lookup is available, use a real official or reliable logo asset.
    - Put the logo in the same reference logo slot and treatment.
    - Do not invent, redraw, recolor, or stylize the logo.
+   - If no logo is uploaded, choose one path: reliable public-logo lookup, recommend upload, or pure-text/no-logo cover.
+   - Pure-text/no-logo covers must convert the logo area into a designed text focal point, not leave it empty.
 
 2. Replace slogan/title/copy:
    - Main title.
@@ -59,6 +61,8 @@ Do not:
 - Use default-looking typed small text for CTA, benefit labels, or bottom copy.
 - Put a product/tool name inside the middle of a connected Chinese phrase.
 - Use a rough painted, mosaic, blurred, or generic backplate for a logo unless the selected reference uses that exact treatment.
+- Invent a logo for unknown/private brands.
+- Leave a blank logo area when making a pure-text cover.
 - Repeat the same copy across subtitle and menu/benefit labels.
 - Deliver misaligned check/menu icon rows.
 
